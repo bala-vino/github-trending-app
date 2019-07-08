@@ -7,9 +7,13 @@ target 'GitTrending' do
   
   # Pods for GitTrending
   
-  # Alamofire is an HTTP networking library
+  # Alamofire : HTTP networking library
   # refs -> https://github.com/Alamofire/Alamofire
   pod 'Alamofire'
+  
+  # SwiftSoup :  Pure Swift HTML Parser, with best of DOM, CSS, and jquery
+  # refs -> https://github.com/scinfu/SwiftSoup
+  pod 'SwiftSoup'
   
   target 'GitTrendingTests' do
     inherit! :search_paths
