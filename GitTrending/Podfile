@@ -11,6 +11,14 @@ target 'GitTrending' do
   # refs -> https://github.com/Alamofire/Alamofire
   pod 'Alamofire'
   
+  # AlamofireImage : Image component library for Alamofire
+  # refs -> https://github.com/Alamofire/AlamofireImage
+  pod 'AlamofireImage'
+  
+  # AlamofireNetworkActivityIndicator : Controls the visibility of the network activity indicator using Alamofire
+  # refs -> https://github.com/Alamofire/AlamofireNetworkActivityIndicator
+  pod 'AlamofireNetworkActivityIndicator'
+
   # SwiftSoup :  Pure Swift HTML Parser, with best of DOM, CSS, and jquery
   # refs -> https://github.com/scinfu/SwiftSoup
   pod 'SwiftSoup'

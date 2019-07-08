@@ -19,6 +19,7 @@
 		7A16C32D22CA2AF300465249 /* GitTrendingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A16C32C22CA2AF300465249 /* GitTrendingUITests.swift */; };
 		7AD07E3322D38589005D4DCC /* GTAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD07E3222D38589005D4DCC /* GTAPIResponse.swift */; };
 		7AD07E3522D385A3005D4DCC /* GTAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD07E3422D385A3005D4DCC /* GTAPIRequest.swift */; };
+		7AD07E3722D385F8005D4DCC /* GTNetworkServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD07E3622D385F8005D4DCC /* GTNetworkServiceProvider.swift */; };
 		98AD55293E0692809634CE68 /* Pods_GitTrending.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129BE6D08AAC60369D748E0E /* Pods_GitTrending.framework */; };
 		BD34ABFD29A9B72CC7240C9E /* Pods_GitTrendingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42B88F48F763060BF1822C5 /* Pods_GitTrendingTests.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		7A16C32E22CA2AF300465249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AD07E3222D38589005D4DCC /* GTAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTAPIResponse.swift; sourceTree = "<group>"; };
 		7AD07E3422D385A3005D4DCC /* GTAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTAPIRequest.swift; sourceTree = "<group>"; };
+		7AD07E3622D385F8005D4DCC /* GTNetworkServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTNetworkServiceProvider.swift; sourceTree = "<group>"; };
 		A1A8DF2469F0E16E3E2C68F2 /* Pods-GitTrendingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitTrendingTests.release.xcconfig"; path = "Target Support Files/Pods-GitTrendingTests/Pods-GitTrendingTests.release.xcconfig"; sourceTree = "<group>"; };
 		A710868E0BFB704E09D14109 /* Pods-GitTrending.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitTrending.release.xcconfig"; path = "Target Support Files/Pods-GitTrending/Pods-GitTrending.release.xcconfig"; sourceTree = "<group>"; };
 		B42B88F48F763060BF1822C5 /* Pods_GitTrendingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitTrendingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +199,7 @@
 			children = (
 				7AD07E3222D38589005D4DCC /* GTAPIResponse.swift */,
 				7AD07E3422D385A3005D4DCC /* GTAPIRequest.swift */,
+				7AD07E3622D385F8005D4DCC /* GTNetworkServiceProvider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A16C30D22CA2AF200465249 /* GitTrending.xcdatamodeld in Sources */,
+				7AD07E3722D385F8005D4DCC /* GTNetworkServiceProvider.swift in Sources */,
 				7A16C30822CA2AF200465249 /* AppDelegate.swift in Sources */,
 				7A16C30F22CA2AF200465249 /* ContentView.swift in Sources */,
 				7AD07E3522D385A3005D4DCC /* GTAPIRequest.swift in Sources */,
