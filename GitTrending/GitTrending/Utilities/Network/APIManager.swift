@@ -16,17 +16,35 @@ private func getQueryParamsForTrending(_ language: String?, _ dateRange: Trendin
     return queryParams
 }
 
-func getTrendingRepositories(_ language: String?, _ dateRange: TrendingDataRange = .daily) {
+private func getTrending(_ language: String?, _ dateRange: TrendingDataRange = .daily,
+                         _ type: TrendingType = .repository,
+                         completionHandler: @escaping (Trending?, Error?) -> ()) {
     let queryParams = getQueryParamsForTrending(language, dateRange)
-    let endpoint = Endpoint(path: URLPath.trendingRepo.rawValue, queryItems: queryParams)
+    var endpoint = Endpoint(path: URLPath.trendingRepo.rawValue, queryItems: queryParams)
+    if type == .developer {
+        endpoint = Endpoint(path: URLPath.trendingDevelopers.rawValue, queryItems: queryParams)
+    }
     var apiRequest = APIRequest(endPoint: endpoint)
     apiRequest.responseType = .string
+
+    request(apiRequest, String.self) { (response, error) in
+        if let error = error {
+            completionHandler(nil, error)
+        }
+        else {
+            let trendingModel = parseTrendingResponse(response, type: type)
+            completionHandler(trendingModel, nil)
+        }
+    }
 }
 
-func getTrendingDevelopers(_ language: String?, _ dateRange: TrendingDataRange = .daily) {
-    let queryParams = getQueryParamsForTrending(language, dateRange)
-    let endpoint = Endpoint(path: URLPath.trendingDevelopers.rawValue, queryItems: queryParams)
-    var apiRequest = APIRequest(endPoint: endpoint)
-    apiRequest.responseType = .string
+func getTrendingRepositories(_ language: String?, _ dateRange: TrendingDataRange = .daily,
+                             completionHandler: @escaping (Trending?, Error?) -> ()) {
+    getTrending(language, dateRange, .repository, completionHandler: completionHandler)
+}
+
+func getTrendingDevelopers(_ language: String?, _ dateRange: TrendingDataRange = .daily,
+                           completionHandler: @escaping (Trending?, Error?) -> ()) {
+    getTrending(language, dateRange, .developer, completionHandler: completionHandler)
 }
 

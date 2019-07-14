@@ -24,6 +24,11 @@
 		7A87D0FA22D8C8A200706DCC /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A87D0F922D8C8A200706DCC /* Thread.swift */; };
 		7A87D0FE22D8CC3900706DCC /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A87D0FD22D8CC3900706DCC /* APIConstants.swift */; };
 		7A87D10022D8CC5700706DCC /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A87D0FF22D8CC5700706DCC /* APIRequest.swift */; };
+		7A87D10522DA518E00706DCC /* TrendingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A87D10422DA518E00706DCC /* TrendingRepository.swift */; };
+		7A87D10722DA51AA00706DCC /* TrendingDeveloper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A87D10622DA51AA00706DCC /* TrendingDeveloper.swift */; };
+		7A87D10922DA520D00706DCC /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A87D10822DA520D00706DCC /* Language.swift */; };
+		7A87D10B22DA551500706DCC /* Trending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A87D10A22DA551500706DCC /* Trending.swift */; };
+		7A87D10D22DA55A600706DCC /* TrendingResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A87D10C22DA55A600706DCC /* TrendingResponseParser.swift */; };
 		98AD55293E0692809634CE68 /* Pods_GitTrending.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129BE6D08AAC60369D748E0E /* Pods_GitTrending.framework */; };
 		BD34ABFD29A9B72CC7240C9E /* Pods_GitTrendingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42B88F48F763060BF1822C5 /* Pods_GitTrendingTests.framework */; };
 /* End PBXBuildFile section */
@@ -73,6 +78,11 @@
 		7A87D0F922D8C8A200706DCC /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		7A87D0FD22D8CC3900706DCC /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		7A87D0FF22D8CC5700706DCC /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		7A87D10422DA518E00706DCC /* TrendingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepository.swift; sourceTree = "<group>"; };
+		7A87D10622DA51AA00706DCC /* TrendingDeveloper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingDeveloper.swift; sourceTree = "<group>"; };
+		7A87D10822DA520D00706DCC /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		7A87D10A22DA551500706DCC /* Trending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trending.swift; sourceTree = "<group>"; };
+		7A87D10C22DA55A600706DCC /* TrendingResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingResponseParser.swift; sourceTree = "<group>"; };
 		A1A8DF2469F0E16E3E2C68F2 /* Pods-GitTrendingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitTrendingTests.release.xcconfig"; path = "Target Support Files/Pods-GitTrendingTests/Pods-GitTrendingTests.release.xcconfig"; sourceTree = "<group>"; };
 		A710868E0BFB704E09D14109 /* Pods-GitTrending.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitTrending.release.xcconfig"; path = "Target Support Files/Pods-GitTrending/Pods-GitTrending.release.xcconfig"; sourceTree = "<group>"; };
 		B42B88F48F763060BF1822C5 /* Pods_GitTrendingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitTrendingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +168,8 @@
 				7A16C30722CA2AF200465249 /* AppDelegate.swift */,
 				7A16C30922CA2AF200465249 /* SceneDelegate.swift */,
 				7A16C30E22CA2AF200465249 /* ContentView.swift */,
+				7A87D10222DA515800706DCC /* Models */,
+				7A87D10322DA515900706DCC /* Views */,
 				7AD07E2E22D38549005D4DCC /* Utilities */,
 				7A16C31022CA2AF300465249 /* Assets.xcassets */,
 				7A16C31522CA2AF300465249 /* LaunchScreen.storyboard */,
@@ -204,6 +216,32 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		7A87D10122DA511900706DCC /* HTMLParsing */ = {
+			isa = PBXGroup;
+			children = (
+				7A87D10C22DA55A600706DCC /* TrendingResponseParser.swift */,
+			);
+			path = HTMLParsing;
+			sourceTree = "<group>";
+		};
+		7A87D10222DA515800706DCC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7A87D10422DA518E00706DCC /* TrendingRepository.swift */,
+				7A87D10622DA51AA00706DCC /* TrendingDeveloper.swift */,
+				7A87D10822DA520D00706DCC /* Language.swift */,
+				7A87D10A22DA551500706DCC /* Trending.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7A87D10322DA515900706DCC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		7AD07E2E22D38549005D4DCC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +254,7 @@
 		7AD07E2F22D38549005D4DCC /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				7A87D10122DA511900706DCC /* HTMLParsing */,
 				7A6BFEC022D78CBC004FABC4 /* NetworkServiceProvider.swift */,
 				7A6BFEC222D79340004FABC4 /* APIManager.swift */,
 				7A87D0FD22D8CC3900706DCC /* APIConstants.swift */,
@@ -448,13 +487,18 @@
 				7A16C30D22CA2AF200465249 /* GitTrending.xcdatamodeld in Sources */,
 				7A87D0FA22D8C8A200706DCC /* Thread.swift in Sources */,
 				7A16C30822CA2AF200465249 /* AppDelegate.swift in Sources */,
+				7A87D10922DA520D00706DCC /* Language.swift in Sources */,
 				7A6BFEC322D79340004FABC4 /* APIManager.swift in Sources */,
+				7A87D10522DA518E00706DCC /* TrendingRepository.swift in Sources */,
 				7A87D0F822D8C88F00706DCC /* JSON.swift in Sources */,
 				7A16C30F22CA2AF200465249 /* ContentView.swift in Sources */,
 				7A87D0FE22D8CC3900706DCC /* APIConstants.swift in Sources */,
 				7A6BFEC122D78CBC004FABC4 /* NetworkServiceProvider.swift in Sources */,
 				7A16C30A22CA2AF200465249 /* SceneDelegate.swift in Sources */,
 				7A87D10022D8CC5700706DCC /* APIRequest.swift in Sources */,
+				7A87D10B22DA551500706DCC /* Trending.swift in Sources */,
+				7A87D10722DA51AA00706DCC /* TrendingDeveloper.swift in Sources */,
+				7A87D10D22DA55A600706DCC /* TrendingResponseParser.swift in Sources */,
 				7A6BFECA22D7AC5F004FABC4 /* Dictionary+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

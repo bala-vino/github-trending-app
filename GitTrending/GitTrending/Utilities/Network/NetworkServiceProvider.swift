@@ -11,7 +11,7 @@ import Alamofire
 
 func request<T:Codable>(_ request: APIRequest,
                         _ type: T.Type,
-                        completionHandler: @escaping (Bool, T?, Error?) -> ()) {
+                        completionHandler: @escaping (T?, Error?) -> ()) {
     
     guard let url = request.endPoint.url else {
         return
@@ -29,7 +29,7 @@ func request<T:Codable>(_ request: APIRequest,
         dataRequest.responseJSON { (dataResponse) in
             DispatchQueue.runInMainAsync {
                 let responseValue:T?  = JSONDecoder().getObject(type, dataResponse.data!)
-                completionHandler(dataResponse.result.isSuccess, responseValue, dataResponse.error)
+                completionHandler(responseValue, dataResponse.error)
             }
         }
         
@@ -40,7 +40,7 @@ func request<T:Codable>(_ request: APIRequest,
                 if let data = dataResponse.data {
                     responseValue = String(decoding: data, as: UTF8.self) as? T
                 }
-                completionHandler(dataResponse.result.isSuccess, responseValue, dataResponse.error)
+                completionHandler(responseValue, dataResponse.error)
             }
         }
         
