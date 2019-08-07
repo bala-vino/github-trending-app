@@ -9,7 +9,7 @@
 import Foundation
 import SwiftSoup
 
-func parseTrendingResponse(_ content: String?, type: TrendingType = .repository) -> Trending? {
+func parseTrendingResponse(_ content: String?, type: TrendingType = .repositories) -> Trending? {
     guard let content = content else {
         return nil
     }
@@ -20,7 +20,7 @@ func parseTrendingResponse(_ content: String?, type: TrendingType = .repository)
         let languages = try getLanguages(from: languageElements)
         
         var trending = Trending(languages: languages)
-        if type == .developer {
+        if type == .developers {
             let developerElements = try doc.getElementsByAttributeValueContaining("class", "Box-row")
             trending.developers = try getDevelopers(from: developerElements)
         }

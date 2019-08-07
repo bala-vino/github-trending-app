@@ -17,11 +17,11 @@ private func getQueryParamsForTrending(_ language: String?, _ dateRange: Trendin
 }
 
 private func getTrending(_ language: String?, _ dateRange: TrendingDataRange = .daily,
-                         _ type: TrendingType = .repository,
+                         _ type: TrendingType = .repositories,
                          completionHandler: @escaping (Trending?, Error?) -> ()) {
     let queryParams = getQueryParamsForTrending(language, dateRange)
     var endpoint = Endpoint(path: URLPath.trendingRepo.rawValue, queryItems: queryParams)
-    if type == .developer {
+    if type == .developers {
         endpoint = Endpoint(path: URLPath.trendingDevelopers.rawValue, queryItems: queryParams)
     }
     var apiRequest = APIRequest(endPoint: endpoint)
@@ -40,11 +40,11 @@ private func getTrending(_ language: String?, _ dateRange: TrendingDataRange = .
 
 func getTrendingRepositories(_ language: String?, _ dateRange: TrendingDataRange = .daily,
                              completionHandler: @escaping (Trending?, Error?) -> ()) {
-    getTrending(language, dateRange, .repository, completionHandler: completionHandler)
+    getTrending(language, dateRange, .repositories, completionHandler: completionHandler)
 }
 
 func getTrendingDevelopers(_ language: String?, _ dateRange: TrendingDataRange = .daily,
                            completionHandler: @escaping (Trending?, Error?) -> ()) {
-    getTrending(language, dateRange, .developer, completionHandler: completionHandler)
+    getTrending(language, dateRange, .developers, completionHandler: completionHandler)
 }
 

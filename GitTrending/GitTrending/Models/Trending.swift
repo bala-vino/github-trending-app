@@ -8,9 +8,9 @@
 
 import Foundation
 
-enum TrendingType {
-    case repository
-    case developer
+enum TrendingType: String {
+    case repositories = "Repositories"
+    case developers = "Developers"
 }
 
 struct PopularRepo {
